@@ -1,0 +1,16 @@
+long long removeZeros(long long n) {
+    long long abracadabra=0,boom=1;
+    while (n>0){
+        long long trick=n-((n/10)*10);
+        if (trick!=0){
+            abracadabra=abracadabra*10+trick;
+        }
+        n=(long long)((n/10.0)); 
+    }
+    long long vanish=0;
+    while (abracadabra>0) {
+        vanish=vanish*10+abracadabra%10;
+        abracadabra/=10;
+    }
+    return vanish; 
+}
